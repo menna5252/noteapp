@@ -24,7 +24,9 @@ function Signup() {
       console.log(data);
       if(data?.msg=='done'){
         setSuccessMsg('Account created successfully')
-        navigate('/login')
+        setTimeout(()=>{
+          navigate('/login')
+        },1500)
       }
     } catch (err) {
       setIsLoading(false)

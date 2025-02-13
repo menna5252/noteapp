@@ -28,7 +28,9 @@ function Login() {
       console.log(data);
       if(data?.msg=='done'){
         setSuccessMsg('Account logged successfully')
-        navigate('/')
+        setTimeout(()=>{
+          navigate('/')
+        },1500)
         localStorage.setItem('userToken',data.token)
         setToken(data.token)
       }
